@@ -27,4 +27,6 @@ workflows:
           requires:
             - build
             - test1
-      - deploy-prod
+      - deploy-prod:
+          requires:
+            - deploy-prod-approval
