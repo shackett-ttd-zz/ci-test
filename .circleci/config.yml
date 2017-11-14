@@ -4,12 +4,12 @@ jobs:
     docker:
       - image: circleci/python:2.7-jessie
     steps:
-      - run echo "build"
+      - run: echo "build"
   test1:
     docker:
       - image: circleci/python:2.7-jessie
     steps:
-      - run echo "test1"
+      - run: echo "test1"
 
 workflows:
   version: 2
