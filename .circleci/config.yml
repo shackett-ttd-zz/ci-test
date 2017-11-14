@@ -17,3 +17,7 @@ workflows:
     jobs:
       - build
       - test1
+  deploy-prod:
+    type: approval
+    requires:
+      - build_and_test
