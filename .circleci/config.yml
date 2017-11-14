@@ -13,11 +13,12 @@ jobs:
 
 workflows:
   version: 2
-  build_and_test:
+  build_test_approve:
     jobs:
       - build
       - test1
-  deploy-prod:
-    type: approval
-    requires:
-      - build_and_test
+      - deploy-prod:
+          type: approval
+          requires:
+            - build
+            - test1
