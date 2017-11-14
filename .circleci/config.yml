@@ -10,6 +10,11 @@ jobs:
       - image: circleci/python:2.7-jessie
     steps:
       - run: echo "test1"
+  deploy-prod:
+    docker:
+      - image: circleci/python:2.7-jessie
+    steps:
+      - run: echo "deploying..."
 
 workflows:
   version: 2
